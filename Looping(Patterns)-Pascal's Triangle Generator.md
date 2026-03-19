@@ -1,44 +1,37 @@
-# 🔺 Looping(Patterns)-Pascal's Triangle Generator in Python
-
-This project demonstrates a simple Python program to generate **Pascal’s Triangle**, where the number of rows is provided by the user.
-
----
+## Loops in Python: Palindrome Number Checker
 
 ## 🎯 Aim
-
-To write a Python program that generates **Pascal's Triangle** using numbers. The number of rows is accepted from the user.
-
----
+To write a Python program that checks whether a given number is a **palindrome** using loops.
 
 ## 🧠 Algorithm
+1. Get input from the user and assign it to a variable `num`.
+2. Assign the value of `num` to a temporary variable `temp`.
+3. Initialize a variable `rev` to 0 (used to store the reversed number).
+4. Use a `while` loop to reverse the digits:
+   - While `temp > 0`:
+     - `rev = (10 * rev) + temp % 10`
+     - `temp = temp // 10`
+5. After the loop, compare `rev` with `num`:
+   - If equal, print that the number is a palindrome.
+   - Else, print that it is not a palindrome.
 
-1. Start the program.
-2. Input the number of rows from the user.
-3. Loop from 0 to the number of rows.
-4. For each row:
-   - Print appropriate spaces to shape the triangle.
-   - Compute values using the formula:  
-     \[
-     C(n, k) = \frac{n!}{k!(n-k)!}
-     \]
-5. Print all rows of Pascal’s Triangle.
-6. End the program.
-
----
-
-## 🧪 Program
-```python
-n=int(input())
-for i in range(0,n):
-    for j in range(i,n):
-        print(n,"",end="")
-    print()
+## 🧾 Program
+``` pyhton
+num=int(input())
+temp = num
+count =0
+while num>0:
+    digit =num%10
+    count= count*10+digit
+    num//=10
+if temp== count:
+    print("The given number {} is a Palindrome".format(temp))
+else:
+    print("The given number {} is not a palindrome".format(temp))
 
 ```
-
-## Sample Output
-![image](https://github.com/user-attachments/assets/a1cf7bed-c40b-427d-85d4-fa0c8669b9c0)
+## Output
+![image](https://github.com/user-attachments/assets/22de3a79-e3f0-49d3-be73-abf300a65928)
 
 ## Result
-Thus the Python program that generates **Pascal's Triangle** using numbers is executed successfully.
-
+Thus python program to check whether the given number is palindrome or not is executed successfully.
