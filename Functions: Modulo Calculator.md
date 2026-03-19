@@ -11,9 +11,16 @@ To write a Python program that defines a function which accepts two values and r
 5. Call the `result` function with the user-provided values.
 
 ## 🧾 Program
+```python
+def result(a,b,c):
+    return (a+b+c)/3
+a=int(input())
+b=int(input())
+c=int(input())
+print("average is",result(a,b,c))
 
-Add code Here
-
+```
 ## Output
-
+![image](https://github.com/user-attachments/assets/174d9874-c370-4de1-8beb-a8cb865a2826)
 ## Result
+Thus the Python program that defines a function which accepts three values and return the average is executed successfully.
